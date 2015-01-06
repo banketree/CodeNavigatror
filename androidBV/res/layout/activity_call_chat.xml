@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.fsti.ladder"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/rltCallChatStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/call_chat_top_bg" >
+
+        <TextView
+            android:id="@+id/tvRoomNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvCallChatStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRoomNum"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:text="@string/call_in_progress"
+            android:textColor="@color/wathet_blue"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvCallChatTimeConsum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rltCallChatStatus"
+        android:layout_below="@+id/rltCallChatStatus"
+        android:background="@drawable/call_chat_center_bg"
+        android:gravity="center"
+        android:textColor="@color/wathet_blue"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignLeft="@+id/rltCallChatStatus"
+        android:layout_below="@+id/tvCallChatTimeConsum"
+        android:background="@drawable/call_chat_bottom_bg"
+        android:gravity="center_horizontal|bottom" >
+
+        <TextView
+            android:id="@+id/tvOperationRemind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/cancle_call_click_star"
+            android:textColor="@color/wathet_blue"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameCallChat"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@+id/rltCallChatStatus" >
+        <com.fsti.ladder.widget.ViewFlow
+            android:id="@+id/viewflow"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.fsti.ladder.widget.ViewFlow>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:padding="2dp" >
+
+            <com.fsti.ladder.widget.CircleFlowIndicator
+                android:id="@+id/viewflowindic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:padding="2dp"
+                app:activeColor="#0678D8"
+                app:activeType="fill"
+                app:circleSeparation="18dip"
+                app:inactiveColor="#A0A2A3"
+                app:inactiveType="fill"
+                app:radius="3dp" />
+        </LinearLayout>
+        
+    </FrameLayout>
+
+</RelativeLayout>
+<!-- <com.fsti.ladder.widget.ViewFlow
+            android:id="@+id/viewflow"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.fsti.ladder.widget.ViewFlow>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:padding="2dp" >
+
+            <com.fsti.ladder.widget.CircleFlowIndicator
+                android:id="@+id/viewflowindic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:padding="2dp"
+                app:activeColor="#0678D8"
+                app:activeType="fill"
+                app:circleSeparation="18dip"
+                app:inactiveColor="#A0A2A3"
+                app:inactiveType="fill"
+                app:radius="3dp" />
+        </LinearLayout> -->

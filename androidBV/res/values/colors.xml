@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="wathet_blue">#94CBF4</color><!-- 浅蓝色 -->
+    <color name="white">#FFFFFF</color><!-- 白色 -->
+    <color name="black">#000000</color><!-- 黑色 -->
+    <color name="transparent">#00000000</color><!-- 透明 -->
+    <color name="blue_black">#19426E</color><!-- 蓝黑色 -->
+    
+    
+    
+</resources>

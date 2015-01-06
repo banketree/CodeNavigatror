@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android梯口机</string>
+    
+    <!-- SettingsActivity 设置界面的文字 -->
+	<string name="click_star_to_back">请按 * 返回</string>
+
+	
+	<!-- CallChatActivity   会话界面的文字 -->
+	<string name="chat_in_progress">正在通话...</string>
+	<string name="end_up_call">结束通话</string>
+	<string name="call_in_progress">正在呼叫...</string>
+	<string name="call_error">呼叫不成功</string>
+  
+	<string name="hang_up_click_star">挂断  请按*</string>
+	<string name="back_click_star">返回  请按*</string>
+	<string name="cancle_call_click_star">取消呼叫  请按*</string>
+	
+	<!-- InputNumberActivity   会话界面的文字 -->
+    <string name="call_property_management">呼叫物业</string>
+    <string name="call_property_management_fail">呼叫物业失败</string>
+	<string name="hint_room_num_to_call">请输入房号按 # 开始呼叫</string>
+    <string name="hint_pwd_to_open_door">请输入密码按 # 开门</string>
+    
+	<string name="hint_call_room_host">呼叫业主：房号 + #</string>
+	<string name="hint_del_figure_or_cancle_call">删除数字或取消呼叫：*</string>
+	<string name="hint_del_figure_click_star">删除密码按：*</string>
+	<string name="hint_pwd_open_door">密码开门： #  + 密码 + #</string>
+	<string name="please_input_password">请输入密码</string>
+	<string name="the_room_no_exist">您呼叫的房间不存在</string>
+    <string name="right_password_door_opened">密码正确,门开了</string>
+	<string name="wrong_password">开门密码不正确</string>
+	<string name="content_description_img_sip">sip的状态图片</string>
+	<string name="content_description_img_link">连接状态的图片</string>
+	<string name="content_description_img_network">网络状态图片</string>
+	<string name="sip_offline">sip未注册</string>
+    <string name="card_vail_door_opened">卡验证有效，门开了</string>
+    <string name="door_opened">门开了</string>
+    <string name="card_invail">此卡未授权</string>
+    
+    <!-- RestartActivity  重启界面的文字  -->
+    <string name="sure_restart_dev">您确认重启设备吗</string>
+    <string name="affirm_click">确认  请按</string>
+    <string name="go_back_click">返回  请按</string>
+    <string name="well_key">#</string>
+    <string name="star_key">*</string>
+    
+    <!-- DeviceInfoActivity   设备信息界面 -->
+    <string name="please_click">请按</string>
+    <string name="go_back">返回</string>
+    
+    <!-- Password s   -->
+    <string name="please_input_opendoor_pwd">请输入新的开锁密码</string>
+    <string name="please_input_manage_pwd">请输入新的管理密码</string>
+    <string name="please_input_device_code">请输入新的序列号</string>
+    <string name="please_input_platform_ip">请输入新的平台域名IP</string>
+    <string name="please_input_platform_port">请输入新的平台域名端口</string>
+    <string name="please_input_pppoe_account">请输入新的PPPOE账号</string>
+    <string name="please_input_pppoe_pwd">请输入新的PPPOE密码</string>
+    <string name="please_input_change_audio">请输入新的媒体音量</string>
+    <string name="please_input_change_call">请输入新的通话音量</string>
+    <string name="please_input_change_video">请输入新的视频质量</string>
+    <string name="please_input_change_block ">请输入新的楼栋号参数</string>
+    <string name="please_input_change_unit">请输入新的单元号参数</string>
+    <string name="please_input_i5_platform_realm">请输入新的I5平台域名</string>
+    <string name="please_input_platform_username">请输入新的梯口机账号</string>
+    <string name="please_input_platform_password">请输入新的梯口机密码</string>
+    <string name="please_input_change_rotation">请输入新的翻转参数</string>
+    <string name="please_input_change_videoformat">请输入新的分辨率</string>
+    <string name="please_input_change_negotiatemode">请输入新的协商模式</string>
+    <string name="please_input_monitor_port">请输入新的监测网络端口</string>
+    <string name="please_input_debug_mode">请输入新的调试模式</string>
+    <string name="please_input_net_mode">请输入新的网络环境参数</string>
+    
+    <!-- NetConnectTypeActivity  网络连接方式 -->
+    <string name="choose_connetion_type">请选择新的网络接入方式</string>
+    <string name="dhcp_net_type">1.DHCP网络接入</string>
+     <string name="pppoe_net_type">2.PPPOE网络接入</string>
+    <string name="regular_ip_net_type">3.固定IP网络接入</string>
+    
+   
+    
+    <!-- NetModificationActivity   -->
+    <string name="input_ip_address">请输入新的IP地址</string>
+    <string name="input_subnet_mask">请输入新的子网掩码</string>
+    <string name="input_gateway_address">请输入新的网关地址</string>
+    <string name="input_dns_address">请输入新的DNS地址</string>
+    <string name="input_monitor_ip">请输入新的监测网络IP</string>
+
+</resources>

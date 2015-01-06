@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ladder_main_background"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/choose_net_connet_title_bg"
+        android:gravity="center"
+        android:text="@string/choose_connetion_type"
+        android:textColor="@color/white"
+        android:textSize="23sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/choose_net_connet_type_bg"
+        android:orientation="vertical"
+        android:weightSum="3" >
+
+
+
+        <TextView
+            android:id="@+id/tv_dhcp_ip_net"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingLeft="100dp"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/dhcp_net_type"
+            android:textColor="@color/wathet_blue"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_pppoe_net"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingLeft="100dp"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/pppoe_net_type"
+            android:textColor="@color/wathet_blue"
+            android:textSize="20sp" />
+        
+           <TextView
+            android:id="@+id/tv_regular_ip_net"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingLeft="100dp"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/regular_ip_net_type"
+            android:textColor="@color/wathet_blue"
+            android:textSize="20sp" />
+                
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:layout_gravity="right"
+        android:paddingRight="10dp" >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/please_click"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/star_key"
+            android:textColor="@color/blue_black"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/go_back"
+            />
+        
+    </LinearLayout>
+
+</LinearLayout>

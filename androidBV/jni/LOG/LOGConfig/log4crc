@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE log4c SYSTEM "">
+
+<log4c version="1.2.1">
+
+	<config>
+		<bufsize>0</bufsize>
+		<debug level="2"/>
+		<nocleanup>0</nocleanup>
+		<reread>1</reread>
+		<file_buffer>1024</file_buffer>
+	</config>
+
+	<upload>
+		<mode>2</mode>
+		<hour>23</hour>
+		<minute>00</minute>
+		<maxspace>96</maxspace>
+		<cycle_time>5</cycle_time>
+	</upload>
+
+	<category name="root" priority="trace"/>
+
+	<category name="e_runlog" priority="info" appender="appender_runlog" />
+	<category name="e_runlog.e_eventlog" priority="info" appender="appender_eventlog" />
+	<category name="e_runlog.e_eventlog.e_screen" priority="info" appender="stdout" />
+
+	<category name="r_runlog" priority="info" appender="appender_runlog" />
+	<category name="r_runlog.r_screen" priority="debug" appender="stdout" />
+
+	 <rollingpolicy name="rollingpolicy_eventlog" type="datednamelog" />
+	 <rollingpolicy name="rollingpolicy_runlog" type="datednamelog"  />
+
+	<appender name="appender_eventlog" type="rollingfile" logdir="./LogDir/Log" prefix="eventlog"  layout="ext_eventlog" rollingpolicy="rollingpolicy_eventlog" />
+	<appender name="appender_runlog" type="rollingfile" logdir="./LogDir/Log" prefix="runlog"  layout="ext_runlog" rollingpolicy="rollingpolicy_runlog"  />
+	<appender name="stdout" type="stream" layout="basic"/>
+
+	<layout name="ext_eventlog" type="ext_eventlog"/>
+	<layout name="ext_runlog" type="ext_runlog"/>
+	<layout name="basic" type="basic"/>
+
+</log4c>

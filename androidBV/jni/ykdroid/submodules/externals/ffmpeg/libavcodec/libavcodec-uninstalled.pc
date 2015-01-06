@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}
+includedir=/usr/workspace/android_workspace/AndroidLadder/jni/ykdroid/submodules/externals/ffmpeg
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 52.91.1
+Requires: libavcore = 0.9.0
+Conflicts:
+Libs: ${libdir}/libavcodec.a 
+Cflags: -I${includedir}

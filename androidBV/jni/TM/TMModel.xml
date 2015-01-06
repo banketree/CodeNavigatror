@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<model>
+  <schema name="InternetGatewayDevice" type="object">
+    <extension name="Event" type="multipleObject">
+      <extension name="EventCode" type="string"/>
+      <extension name="CommandKey" type="string"/>
+    </extension>
+    <schema name="DeviceSummary" type="string" constraint="1024"/>
+    <schema name="LANDeviceNumberOfEntries" type="unsignedInt"/>
+    <schema name="WANDeviceNumberOfEntries" type="unsignedInt"/>
+    <schema name="ManagementServer" type="object">
+      <schema name="URL" type="string" constraint="256" write="W" inform="true" notification="active"/>
+      <extension name="Timeout" type="unsignedInt"/>
+      <schema name="Username" type="string" constraint="256" write="W"/>
+      <schema name="Password" type="string" constraint="256" write="W"/>
+      <schema name="PeriodicInformEnable" type="boolean" write="W"/>
+      <schema name="PeriodicInformInterval" type="unsignedInt" constraint="1:" write="W"/>
+      <schema name="PeriodicInformTime" type="dateTime" write="W"/>
+      <schema name="ParameterKey" type="string" constraint="32"/>
+      <schema name="ConnectionRequestURL" type="string" constraint="256" />
+      <schema name="ConnectionRequestUsername" type="string" constraint="256" write="W"/>
+      <schema name="ConnectionRequestPassword" type="string" constraint="256" write="W"/>
+      <extension name="ConnectionRequestInterval" type="unsignedInt"/>
+      <schema name="UpgradesManaged" type="boolean" write="W"/>
+      <extension name="Authentication" type="string" constraint="NONE|BASIC|DIGEST"/>
+      <extension name="ProxyURL" type="string" constraint="256"/>
+      <extension name="ProxyUsername" type="string" constraint="256"/>
+      <extension name="ProxyPassword" type="string" constraint="256"/>
+      <schema name="BootStrap" type="boolean" write="W"/>
+    </schema>
+    <schema name="Communication" type="object">
+      <schema name="WanUserName" type="string" constraint="64"/>
+      <schema name="WanPassword" type="string" constraint="64"/>
+      <schema name="SipAccount" type="string" constraint="64"/>
+      <schema name="SipPassword" type="string" constraint="64"/>
+      <schema name="ImsDomainName" type="string" constraint="64"/>
+      <schema name="ImsProxyIP" type="string" constraint="15"/>
+      <schema name="ImsProxyPort" type="string" constraint="5"/>
+      <schema name="FtpIP" type="string" constraint="15"/>
+      <schema name="FtpPort" type="string" constraint="5"/>
+      <schema name="FtpUserName" type="string" constraint="64"/>
+      <schema name="FtpPassword" type="string" constraint="64"/>
+      <schema name="PlatformDomain" type="string" constraint="64"/>
+    </schema>
+    <schema name="DeviceInfo" type="object">
+      <schema name="Manufacturer" type="string" constraint="64"/>
+      <schema name="OUI" type="string" constraint="64"/>
+      <schema name="ProductClass" type="string" constraint="64"/>
+      <schema name="SerialNumber" type="string" constraint="64"/>
+      <schema name="FirmwareVersion" type="string" constraint="64"/>
+      <schema name="DeviceNo" type="string" constraint="64"/>
+    </schema>
+    <schema name="Config" type="object">
+      <schema name="SipCallTimeout" type="string" constraint="2"/>
+      <schema name="ImsCallEn" type="string" constraint="0|1"/>
+      <schema name="PasswordOpendoorEn" type="string" constraint="0|1"/>
+      <schema name="ICOpendoorEn" type="string" constraint="0|1"/>
+      <schema name="KeyOpendoorEn" type="string" constraint="0|1"/>
+      <schema name="MonitorEn" type="string" constraint="0|1"/>
+      <schema name="PasswordOpendoor" type="string" constraint="6"/>
+      <schema name="ICIDOpenLog" type="string" constraint="1024" write="W"/>
+    </schema>
+    <schema name="AlarmStatus" type="object">
+      <schema name="ImsRegisterFail" type="boolean" write="W"/>
+      <schema name="SipCallFail" type="boolean" write="W"/>
+      <schema name="IfBoardComFail" type="boolean" write="W"/>
+      <schema name="FileTransFail" type="boolean" write="W"/>
+      <schema name="UpdateResult" type="boolean" write="W"/>
+      <schema name="SipCallState" type="boolean" write="W"/>
+    </schema>
+    <schema name="AlarmEnable" type="object">
+      <schema name="ImsRegisterAlarmEnable" type="string" constraint="1" write="W"/>
+      <schema name="SipCallAlarmEnable" type="string" constraint="1" write="W"/>
+      <schema name="IfBoardComAlarmEnable" type="string" constraint="1" write="W"/>
+      <schema name="FileTransAlarmEnable" type="string" constraint="1" write="W"/>
+      <schema name="UpdateAlarmEnable" type="string" constraint="1" write="W"/>
+      <schema name="SouthInterfaceAlarmEnable" type="string" constraint="1" write="W"/>
+    </schema>
+    <schema name="Demo" type="object">
+      <schema name="VoipEn" type="string" constraint="0|1" write="W"/>
+      <schema name="PhoneNum" type="string" constraint="20" write="W"/>
+      <schema name="PhoneCount" type="unsignedInt"/>
+      <schema name="PhoneInfo" type="multipleObject" write="W" number="PhoneCount">
+        <schema name="Num" type="unsignedInt"/>
+        <schema name="SipAccount" type="string" constraint="20"/>
+      </schema>
+    </schema>
+    <schema name="PropertyCard" type="object">
+      <schema name="CardCount" type="unsignedInt"/>
+      <schema name="CardInfo" type="multipleObject" write="W" number="CardCount">
+        <schema name="Num" type="unsignedInt"/>
+        <schema name="CardNum" type="string" constraint="100"/>
+      </schema>
+    </schema>
+    <schema name="Business" type="object">
+      <schema name="UserCount" type="unsignedInt"/>
+      <schema name="UserInfo" type="multipleObject" write="W" number="UserCount">
+        <schema name="Num" type="unsignedInt"/>
+        <schema name="BuildingNum" type="string" constraint="6"/>
+        <schema name="UnitNum" type="string" constraint="6"/>
+        <schema name="RoomNumber" type="string" constraint="20"/>
+        <schema name="RingingTime" type="string" constraint="2"/>
+        <schema name="IncomingCallNotice" type="string" constraint="0|1"/>
+        <schema name="TimeDelay" type="string" constraint="2"/>
+        <schema name="PhoneCount" type="unsignedInt"/>
+        <schema name="PhoneInfo" type="multipleObject" write="W" number="PhoneCount">
+          <schema name="Num" type="unsignedInt"/>
+          <schema name="VoipEn" type="string" constraint="0|1"/>
+          <schema name="CsPhoneNum" type="string" constraint="20"/>
+          <schema name="SipAccount" type="string" constraint="20"/>
+          <schema name="TimeNotDisturb" type="string" constraint="60"/>
+        </schema>
+        <schema name="CardCount" type="unsignedInt"/>
+        <schema name="CardInfo" type="multipleObject" write="W" number="CardCount">
+          <schema name="Num" type="unsignedInt"/>
+          <schema name="CardNum" type="string" constraint="100"/>
+        </schema>
+      </schema>
+    </schema>
+    <schema name="UserInterface" type="object">
+      <schema name="PasswordRequired" type="boolean" write="W"/>
+      <schema name="PasswordUserSelectable" type="boolean" write="W"/>
+      <schema name="UpgradeAvailable" type="boolean" write="W"/>
+      <schema name="WarrantyDate" type="dateTime" write="W"/>
+      <schema name="ISPName" type="string" constraint="64" write="W"/>
+      <schema name="ISPHelpDesk" type="string" constraint="32" write="W"/>
+      <schema name="ISPHomePage" type="string" constraint="256" write="W"/>
+      <schema name="ISPHelpPage" type="string" constraint="256" write="W"/>
+      <schema name="ISPLogo" type="base64" constraint="5460" write="W"/>
+      <schema name="ISPLogoSize" type="unsignedInt" constraint="0:4095" write="W"/>
+      <schema name="ISPMailServer" type="string" constraint="256" write="W"/>
+      <schema name="TextColor" type="string" constraint="6" write="W"/>
+      <schema name="BackgroundColor" type="string" constraint="6" write="W"/>
+      <schema name="ButtonColor" type="string" constraint="6" write="W"/>
+      <schema name="ButtonTextColor" type="string" constraint="6" write="W"/>
+      <schema name="AutoUpdateServer" type="string" constraint="256" write="W"/>
+      <schema name="UserUpdateServer" type="string" constraint="256" write="W"/>
+      <schema name="ExampleLogin" type="string" constraint="40" write="W"/>
+      <schema name="ExamplePassword" type="string" constraint="30" write="W"/>
+    </schema>
+  </schema>
+</model>

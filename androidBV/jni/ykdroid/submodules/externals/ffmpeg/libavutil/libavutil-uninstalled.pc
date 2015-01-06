@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}
+includedir=/usr/workspace/android_workspace/AndroidLadder/jni/ykdroid/submodules/externals/ffmpeg
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 50.31.0
+Requires: 
+Conflicts:
+Libs: ${libdir}/libavutil.a 
+Cflags: -I${includedir}

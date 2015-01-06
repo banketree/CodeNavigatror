@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_name">
+        <item >设备信息</item>
+        <item >版本信息</item>
+        <item >网络信息</item>
+        <item >平台信息</item>
+        <item >SIP信息</item>
+        <item >音视频参数变更</item>
+        <item >管理密码变更</item>
+        <item >开锁密码变更</item>
+        <item >设备重启</item>
+    </string-array>
+    
+    <string-array name="device_info_items_name"><!-- <item >MAC地址：</item> -->
+        <item >序列号：</item>        
+        <item >制造商：</item>
+        <item >制造商组织：</item>
+        <item >产品类型</item>        
+    </string-array>
+    
+    <string-array name="position_info_items_name"><!-- <item >MAC地址：</item> -->
+        <item >楼栋号：</item>        
+        <item >单元号：</item>   
+    </string-array>
+    
+    <string-array name="platform_settings_items">
+        <item >平台信息查询</item>
+        <item >序列号变更</item>
+        <item >平台域名变更</item>         
+        <item >平台端口变更</item>     
+        <item >梯口账号变更</item>         
+        <item >梯口密码变更</item>   
+    </string-array>
+    
+    <string-array name="audio_video_settings_items">
+        <item >音视频参数查询</item>
+        <item >媒体音量变更</item>
+        <item >通话音量变更</item>
+        <item >视频质量变更</item> 
+        <item >视频分辨率变更</item> 
+        <item >视频翻转变更</item>   
+        <item >协商模式变更</item>                
+    </string-array> 
+    
+    <string-array name="device_settings_items">
+        <item >设备信息查询</item>
+        <item >楼栋单元查询</item> 
+        <item >楼号参数变更</item>
+        <item >单元参数变更</item>    
+        <item >监测网络信息查询</item>  
+        <item >监测网络IP变更</item>  
+        <item >监测网络端口变更</item>  
+		<item >调试模式变更</item>            
+    </string-array> 
+    
+    <string-array name="net_settings_items">
+        <item >网络信息查询</item>
+        <item >网络接入方式变更</item>
+        <item >IP地址变更</item>     
+        <item >子网掩码变更</item>     
+        <item >网关地址变更</item>
+        <item >DNS地址变更</item>
+        <item >PPPOE账号变更</item>   
+        <item >PPPOE密码变更</item>
+        <item >网络环境参数变更</item>
+    </string-array>
+    <string-array name="version_info_items_name">
+        <item >软件版本：</item>
+        <item >硬件版本：</item>
+        <item >内核版本：</item>           
+    </string-array>
+    <string-array name="net_info_items_name">
+        <item >网络接入方式：</item>
+        <item >本机Mac地址：</item>
+        <item >当前IP地址：</item>
+        <item >静态IP地址：</item>
+        <item >静态子网掩码：</item>     
+        <item >静态网关地址：</item>     
+        <item >静态DNS地址：</item>
+        <item >PPPOE账号：</item>       
+        <item >网络环境：</item>     
+    </string-array>
+    <string-array name="sip_info_items_name">
+        <item >SIP账号：</item>
+        <item >服务器域名：</item>
+        <item >代理服务器域名：</item>     
+        <item >服务器端口：</item>       
+    </string-array>
+    
+    <string-array name="net_monitor_items_name">
+        <item >监测网络IP：</item>
+        <item >监测网络端口：</item>    
+    </string-array>
+    
+    <string-array name="platform_info_items_name">
+        <item >设备序列号：</item>
+        <item >I6平台域名：</item>     
+        <item >I5平台域名：</item> 
+        <item >梯口机账号：</item> 
+    </string-array>
+    
+    <string-array name="audio_video_items_name">
+        <item >媒体音量：</item>
+        <item >通话音量：</item>
+        <item >视频质量：</item>  
+        <item >视频分辨率：</item>    
+        <item >协商模式：</item>    
+        <item >视频翻转：</item>   
+    </string-array>
+    
+</resources>

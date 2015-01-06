@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fsti.ladder"
+    android:persistent="true"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.CAMERA" /> <!--  -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    
+    <!-- Needed to allow Linphone to install on tablets, since android.permission.CALL_PHONE implies android.hardware.telephony is required -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Needed to allow Linphone to install on tablets, since android.permission.CAMERA implies android.hardware.camera and android.hardware.camera.autofocus are required -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".common.AndroidBVApp"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ConfigSettingsActivity"
+            android:screenOrientation="landscape" /> <!-- 配置界面 -->
+        <activity
+            android:name=".activity.AdvertActivity" android:launchMode="singleTop"
+            android:screenOrientation="landscape" /> <!-- 广告界面 -->
+        <activity
+            android:name=".activity.CallChatActivity"
+            android:screenOrientation="landscape" /> <!-- 通话界面 -->
+        <activity
+            android:name=".activity.RelativeInfoActivity"
+            android:screenOrientation="landscape" /> <!-- 信息界面 -->
+        <activity
+            android:name=".activity.RestartActivity"
+            android:screenOrientation="landscape" /> <!-- 设备重启界面 -->
+        <activity
+            android:name=".activity.InputNumberActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" > <!-- 输入数字并进行操作相应操作 -->
+            <intent-filter>
+                <action android:name="action.intent.input.ROOMNUM" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.NetSettingsActivity" android:screenOrientation="landscape" />
+        <activity android:name=".activity.NetConnectTypeActivity" android:screenOrientation="landscape" />
+        <activity android:name=".activity.PasswordModificationActivity" android:screenOrientation="landscape"   android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.NetModificationActivity" android:screenOrientation="landscape"  android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.PlatformSettingsActivity" android:screenOrientation="landscape" />
+        <activity android:name=".activity.VideoSettingsActivity" android:screenOrientation="landscape" />
+        <activity android:name=".activity.DeviceSettingActivity" android:screenOrientation="landscape" />
+		<provider android:name=".common.MyContentProvider" android:authorities="com.fsti.ladder.common" />
+        <service
+            android:name=".service.IDBTService"
+            android:enabled="true"
+            android:exported="false"
+            android:persistent="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="action.intent.start.IDBT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".receiver.BootBroadcastReceiver"
+            android:exported="true"
+            android:priority="1000" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.CLOSE_SYSTEM_DIALOGS" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,9 @@
+[proxy_0]
+reg_proxy=sip:61.154.9.84
+reg_route=sip:61.154.9.84
+reg_identity=sip:6001@61.154.9.84
+reg_expires=600
+reg_sendregister=1
+publish=0
+dial_escape_plus=0
+

@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}
+includedir=/usr/workspace/android_workspace/AndroidLadder/jni/ykdroid/submodules/externals/ffmpeg
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 52.78.5
+Requires: libavcodec = 52.91.1
+Conflicts:
+Libs: ${libdir}/libavformat.a 
+Cflags: -I${includedir}

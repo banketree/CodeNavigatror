@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ladder_main_background" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextSwitcher
+            android:id="@+id/tvHintInputForWhat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_input_number_size" />
+
+        <com.fsti.ladder.widget.InputEditText
+            android:id="@+id/etRoomNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/room_num_input_bg"
+            android:digits="1234567890*"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="25dp"
+            android:textColor="#14578B"
+            android:textSize="@dimen/text_input_number_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical" >
+
+            <TextSwitcher
+                android:id="@+id/tvOperationTips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:textColor="@color/wathet_blue"
+                android:textSize="@dimen/text_hint_input_size" />
+
+            <TextSwitcher
+                android:id="@+id/tvDelTips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="@color/wathet_blue"
+                android:textSize="@dimen/text_hint_input_size" />
+
+            
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ivSipNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_description_img_sip"
+            android:padding="5dp"
+            android:src="@drawable/img_sip_none" />
+
+        <ImageView
+            android:id="@+id/ivLinkNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_description_img_link"
+            android:padding="5dp"
+            android:src="@drawable/img_link_none" />
+
+        <ImageView
+            android:id="@+id/ivNetworkNet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_description_img_network"
+            android:padding="5dp"
+            android:src="@drawable/img_network_none" />
+    </LinearLayout>
+
+</RelativeLayout>
+<!-- <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/hint_pwd_open_door"
+                android:textColor="@color/wathet_blue"
+                android:textSize="@dimen/text_hint_input_size" /> -->

@@ -1,0 +1,20 @@
+# Copyright 2006 The Android Open Source Project
+
+LOCAL_PATH:= $(call my-dir)
+include $(CLEAR_VARS)
+
+#LOCAL_MODULE_TAGS := eng
+
+LOCAL_MODULE:=watchdog       
+
+LOCAL_SRC_FILES:= \
+    		watchdog-simple.c
+
+LOCAL_C_INCLUDES += \
+        $(LOCAL_PATH) 
+
+LOCAL_CFLAGS := -DRIL_SHLIB
+
+#LOCAL_LDLIBS:=  -lcutils -lbinder -lutils -lhardware -lz -llog
+
+include $(BUILD_EXECUTABLE)

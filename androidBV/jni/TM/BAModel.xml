@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<model>
+  <schema name="Device" type="object">
+    <extension name="Event" type="multipleObject">
+      <extension name="EventCode" type="string"/>
+      <extension name="CommandKey" type="string"/>
+    </extension>
+    <schema name="DeviceSummary" type="string" constraint="1024"/>
+    <schema name="LANDeviceNumberOfEntries" type="unsignedInt"/>
+    <schema name="WANDeviceNumberOfEntries" type="unsignedInt"/>
+    <schema name="ManagementServer" type="object">
+      <schema name="URL" type="string" constraint="256" write="W" inform="true" notification="active"/>
+      <extension name="Timeout" type="unsignedInt"/>
+      <schema name="Username" type="string" constraint="256" write="W"/>
+      <schema name="Password" type="string" constraint="256" write="W"/>
+      <schema name="FaultCode" type="string" constraint="256" write="W"/>
+      <schema name="PeriodicInformEnable" type="boolean" write="W"/>
+      <schema name="PeriodicInformInterval" type="unsignedInt" constraint="1:" write="W"/>
+      <schema name="PeriodicInformTime" type="dateTime" write="W"/>
+      <schema name="ParameterKey" type="string" constraint="32"/>
+      <schema name="ConnectionRequestURL" type="string" constraint="256" inform="true"/>
+      <schema name="ConnectionRequestUsername" type="string" constraint="256" write="W"/>
+      <schema name="ConnectionRequestPassword" type="string" constraint="256" write="W"/>
+      <extension name="ConnectionRequestInterval" type="unsignedInt"/>
+      <schema name="UpgradesManaged" type="boolean" write="W"/>
+      <extension name="Authentication" type="string" constraint="NONE|BASIC|DIGEST"/>
+      <extension name="ProxyURL" type="string" constraint="256"/>
+      <extension name="ProxyUsername" type="string" constraint="256"/>
+      <extension name="ProxyPassword" type="string" constraint="256"/>
+      <schema name="BootStrap" type="boolean" write="W"/>
+    </schema>
+    <schema name="Communication" type="object">
+      <schema name="WanUserName" type="string" constraint="64"/>
+      <schema name="WanPassword" type="string" constraint="64"/>
+      <schema name="SipAccount" type="string" constraint="64"/>
+      <schema name="SipPassword" type="string" constraint="64"/>
+      <schema name="ImsDomainName" type="string" constraint="64"/>
+      <schema name="ImsProxyIP" type="string" constraint="15"/>
+      <schema name="ImsProxyPort" type="string" constraint="5"/>
+      <schema name="FtpIP" type="string" constraint="15"/>
+      <schema name="FtpPort" type="string" constraint="5"/>
+      <schema name="FtpUserName" type="string" constraint="64"/>
+      <schema name="FtpPassword" type="string" constraint="64"/>
+      <schema name="PlatformDomain" type="string" constraint="64"/>
+    </schema>
+    <schema name="DeviceInfo" type="object">
+      <schema name="Manufacturer" type="string" constraint="64"/>
+      <schema name="OUI" type="string" constraint="64"/>s
+      <schema name="ProductClass" type="string" constraint="64"/>
+      <schema name="SerialNumber" type="string" constraint="64"/>
+      <schema name="FirmwareVersion" type="string" constraint="64"/>
+      <schema name="HardwareVersion" type="string" constraint="64" inform="true"/>
+      <schema name="SoftwareVersion" type="string" constraint="64" inform="true"/>
+      <schema name="DeviceNo" type="string" constraint="64"/>
+    </schema>
+    <schema name="UserInterface" type="object">
+      <schema name="PasswordRequired" type="boolean" write="W"/>
+      <schema name="PasswordUserSelectable" type="boolean" write="W"/>
+      <schema name="UpgradeAvailable" type="boolean" write="W"/>
+      <schema name="WarrantyDate" type="dateTime" write="W"/>
+      <schema name="ISPName" type="string" constraint="64" write="W"/>
+      <schema name="ISPHelpDesk" type="string" constraint="32" write="W"/>
+      <schema name="ISPHomePage" type="string" constraint="256" write="W"/>
+      <schema name="ISPHelpPage" type="string" constraint="256" write="W"/>
+      <schema name="ISPLogo" type="base64" constraint="5460" write="W"/>
+      <schema name="ISPLogoSize" type="unsignedInt" constraint="0:4095" write="W"/>
+      <schema name="ISPMailServer" type="string" constraint="256" write="W"/>
+      <schema name="TextColor" type="string" constraint="6" write="W"/>
+      <schema name="BackgroundColor" type="string" constraint="6" write="W"/>
+      <schema name="ButtonColor" type="string" constraint="6" write="W"/>
+      <schema name="ButtonTextColor" type="string" constraint="6" write="W"/>
+      <schema name="AutoUpdateServer" type="string" constraint="256" write="W"/>
+      <schema name="UserUpdateServer" type="string" constraint="256" write="W"/>
+      <schema name="ExampleLogin" type="string" constraint="40" write="W"/>
+      <schema name="ExamplePassword" type="string" constraint="30" write="W"/>
+    </schema>
+  </schema>
+</model>

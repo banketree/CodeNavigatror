@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ladder_main_background" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/tv_restart_background"/>
+
+    <TextView
+        android:id="@+id/tv_restart_star_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/star_key"
+        android:textColor="@color/blue_black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_restart_star_key"
+        android:layout_toLeftOf="@+id/tv_restart_star_key"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/go_back_click"
+        android:textColor="@color/wathet_blue" />
+
+    <TextView
+        android:id="@+id/tv_restart_well_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_restart_star_key"
+        android:layout_alignRight="@+id/tv_restart_star_key"
+        android:padding="5dp"
+        android:text="@string/well_key" 
+        android:textColor="@color/blue_black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_restart_well_key"
+        android:layout_toLeftOf="@+id/tv_restart_well_key"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/affirm_click"
+        android:textColor="@color/wathet_blue" />
+
+</RelativeLayout>
